@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10" xmlns:mobile="http://schemas.microsoft.com/appx/manifest/mobile/windows10" IgnorableNamespaces="uap uap2 uap3 uap4 mp mobile iot" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+  <Identity Name="ChassisSend2.2" Publisher="CN=Martin Honzatko" Version="2.2.0.0" />
+  <mp:PhoneIdentity PhoneProductId="84ab10dd-8b8e-48b9-a7e2-516a359a8ca5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Chassis(Send App)</DisplayName>
+    <PublisherDisplayName>Martin Honzatko</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Holographic" MinVersion="10.0.18362.0" MaxVersionTested="10.0.22621.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ChassisSend2.2.App">
+      <uap:VisualElements DisplayName="Chassis(Send App)" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="App for sending UDP packets to server. Version 2.2 with Config file." BackgroundColor="black">
+        <uap:DefaultTile ShortName="Chassis(Send App)" Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="landscapeFlipped" />
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="portraitFlipped" />
+        </uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badgeAndTileText"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <uap:Capability Name="picturesLibrary" />
+    <Capability Name="privateNetworkClientServer" />
+    <uap2:Capability Name="spatialPerception" />
+    <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="proximity" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>
