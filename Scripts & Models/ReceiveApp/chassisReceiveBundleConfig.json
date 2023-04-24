@@ -1,0 +1,18 @@
+{
+	"modelsSource":"polohamodels",
+	"models":
+	[
+		{
+			"modelName":"Car"
+		},
+		{
+			"modelName":"Car1"
+		},
+		{
+			"modelName":"Vozik"
+		},
+		{
+			"modelName":"Car2"
+		}
+	]
+}
